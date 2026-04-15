@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ============================================================
+   PetSanctuary Design System — "The Digital Sanctuary"
+   Material Design 3 Surface Tokens + Custom Brand Palette
+   ============================================================ */
+
+@theme {
+  /* ─── Primary ─── */
+  --color-primary: #964900;
+  --color-primary-container: #f57c00;
+  --color-primary-fixed: #ffdcc6;
+  --color-primary-fixed-dim: #ffb786;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #572800;
+  --color-on-primary-fixed: #311300;
+  --color-on-primary-fixed-variant: #723600;
+  --color-inverse-primary: #ffb786;
+
+  /* ─── Secondary ─── */
+  --color-secondary: #515f76;
+  --color-secondary-container: #d4e3ff;
+  --color-secondary-fixed: #d4e3ff;
+  --color-secondary-fixed-dim: #b8c7e2;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #57657c;
+  --color-on-secondary-fixed: #0d1c30;
+  --color-on-secondary-fixed-variant: #39475d;
+
+  /* ─── Tertiary ─── */
+  --color-tertiary: #006876;
+  --color-tertiary-container: #05adc2;
+  --color-tertiary-fixed: #9eefff;
+  --color-tertiary-fixed-dim: #55d7ed;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #003b43;
+  --color-on-tertiary-fixed: #001f24;
+  --color-on-tertiary-fixed-variant: #004e59;
+
+  /* ─── Error ─── */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* ─── Surface System ─── */
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #ccdbf6;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f3ff;
+  --color-surface-container: #e6eeff;
+  --color-surface-container-high: #dde9ff;
+  --color-surface-container-highest: #d4e3ff;
+  --color-surface-variant: #d4e3ff;
+  --color-surface-tint: #964900;
+  --color-on-surface: #0d1c30;
+  --color-on-surface-variant: #574235;
+  --color-inverse-surface: #233146;
+  --color-inverse-on-surface: #ebf1ff;
+
+  /* ─── Outline ─── */
+  --color-outline: #8b7263;
+  --color-outline-variant: #dec1af;
+
+  /* ─── Background ─── */
+  --color-background: #f9f9ff;
+  --color-on-background: #0d1c30;
+
+  /* ─── Typography ─── */
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+/* ─── Base Styles ─── */
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+/* ─── Material Symbols ─── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ─── Glass Panels (Design System: Glassmorphism rule) ─── */
+.glass-nav {
+  background: rgba(249, 249, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* ─── Custom Scrollbar ─── */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Spring Transition Utility ─── */
+.transition-spring {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-duration: 400ms;
+}
+
+/* ─── Cart Dropdown Animation ─── */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
