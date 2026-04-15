@@ -1,10 +1,11 @@
+import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { useAdmin } from '../contexts/AdminContext';
 
 interface AdminHeaderProps {
   title: string;
   breadcrumb?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export default function AdminHeader({ title, breadcrumb, children }: AdminHeaderProps) {

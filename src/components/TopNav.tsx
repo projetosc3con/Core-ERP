@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, MouseEvent } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import CartDropdown from './CartDropdown';
@@ -15,7 +15,7 @@ export default function TopNav() {
     setIsDropdownOpen(false);
   }, [location.pathname]);
 
-  const toggleDropdown = (e: React.MouseEvent) => {
+  const toggleDropdown = (e: MouseEvent) => {
     e.preventDefault();
     setIsDropdownOpen((prev) => !prev);
   };
